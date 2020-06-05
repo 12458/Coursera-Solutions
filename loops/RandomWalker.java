@@ -12,10 +12,14 @@ public class RandomWalker {
             double direction = Math.random();
             if (direction > 0.25) {
                 if (direction > 0.50) {
-                    if (direction > 0.75) x += 1;
-                    else x += -1;
-                } else y += 1;
-            } else y += -1;
+                    if (direction > 0.75)
+                        x += 1;
+                    else
+                        x += -1;
+                } else
+                    y += 1;
+            } else
+                y += -1;
 
             n += 1;
         }

@@ -8,8 +8,10 @@ public class BandMatrix {
 
         for (int temp = n; temp > 0; temp--) {
             for (int h = 0; h < n; h++) { // h for horizontal
-                if (Math.abs(h - diag) <= width) System.out.print("*  ");
-                else System.out.print("0  ");
+                if (Math.abs(h - diag) <= width)
+                    System.out.print("*  ");
+                else
+                    System.out.print("0  ");
             }
             System.out.println();
             diag += 1;

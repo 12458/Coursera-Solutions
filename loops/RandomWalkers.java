@@ -19,10 +19,14 @@ public class RandomWalkers {
                 direction = Math.random();
                 if (direction > 0.25) {
                     if (direction > 0.50) {
-                        if (direction > 0.75) x++;
-                        else x--;
-                    } else y++;
-                } else y--;
+                        if (direction > 0.75)
+                            x++;
+                        else
+                            x--;
+                    } else
+                        y++;
+                } else
+                    y--;
                 n = n + 1;
             }
             exp = exp - 1;
