@@ -15,22 +15,35 @@ public class RandomWalkers {
             x = 0;
             y = 0;
             n = 0; // n = number of steps
+            /*
+             * while ((Math.abs(x) + Math.abs(y)) < r) { direction = Math.random(); if
+             * (direction > 0.25) { if (direction > 0.50) { if (direction > 0.75) x++; else
+             * x--; } else y++; } else y--; n = n + 1; }
+             */
             while ((Math.abs(x) + Math.abs(y)) < r) {
                 direction = Math.random();
-                if (direction > 0.25) {
-                    if (direction > 0.50) {
-                        if (direction > 0.75)
-                            x++;
-                        else
-                            x--;
-                    } else
-                        y++;
-                } else
+                if (direction < 0.25) {
+                    // 0 <= direction < 0.25
+                    // North
+                    y++;
+
+                } else if ((direction >= 0.25) && (direction < 0.50)) {
+                    // 0.25 <= direction < 0.50
+                    // East
+                    x++;
+                } else if ((direction >= 0.50) && (direction < 0.75)) {
+                    // 0.50 <= direction < 0.75
+                    // South
                     y--;
-                n = n + 1;
+                } else {
+                    // 0.75 <= direction <= 1.00
+                    // West
+                    x--;
+                }
+                n++;
             }
-            exp = exp - 1;
-            totalsteps = totalsteps + n;
+            exp--;
+            totalsteps += n;
         }
         double average = totalsteps / trials;
         System.out.println("average number of steps = " + average);

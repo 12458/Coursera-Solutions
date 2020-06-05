@@ -10,18 +10,25 @@ public class RandomWalker {
         while ((Math.abs(x) + Math.abs(y)) < r) {
             System.out.println("(" + x + ", " + y + ")");
             double direction = Math.random();
-            if (direction > 0.25) {
-                if (direction > 0.50) {
-                    if (direction > 0.75)
-                        x += 1;
-                    else
-                        x += -1;
-                } else
-                    y += 1;
-            } else
-                y += -1;
+            if (direction < 0.25) {
+                // 0 <= direction < 0.25
+                // North
+                y++;
 
-            n += 1;
+            } else if ((direction >= 0.25) && (direction < 0.50)) {
+                // 0.25 <= direction < 0.50
+                // East
+                x++;
+            } else if ((direction >= 0.50) && (direction < 0.75)) {
+                // 0.50 <= direction < 0.75
+                // South
+                y--;
+            } else {
+                // 0.75 <= direction <= 1.00
+                // West
+                x--;
+            }
+            n++;
         }
         System.out.println("(" + x + ", " + y + ")");
         System.out.println("steps = " + n);

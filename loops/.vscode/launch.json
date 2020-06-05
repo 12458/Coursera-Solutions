@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BandMatrix<loops_daca0747>",
+            "request": "launch",
+            "mainClass": "BandMatrix",
+            "projectName": "loops_daca0747"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GeneralizedHarmonic<loops_daca0747>",
+            "request": "launch",
+            "mainClass": "GeneralizedHarmonic",
+            "projectName": "loops_daca0747"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RandomWalker<loops_daca0747>",
+            "request": "launch",
+            "mainClass": "RandomWalker",
+            "projectName": "loops_daca0747"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RandomWalkers<loops_daca0747>",
+            "request": "launch",
+            "mainClass": "RandomWalkers",
+            "projectName": "loops_daca0747"
+        }
+    ]
+}

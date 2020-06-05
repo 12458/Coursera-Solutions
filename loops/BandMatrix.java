@@ -6,15 +6,15 @@ public class BandMatrix {
         int width = Integer.parseInt(args[1]);
         int diag = 0;
 
-        for (int temp = n; temp > 0; temp--) {
-            for (int h = 0; h < n; h++) { // h for horizontal
-                if (Math.abs(h - diag) <= width)
+        for (int i = 0; i < n; i++) { // i for vertical
+            for (int j = 0; j < n; j++) { // j for horizontal
+                if (Math.abs(j - diag) <= width)
                     System.out.print("*  ");
                 else
                     System.out.print("0  ");
             }
             System.out.println();
-            diag += 1;
+            diag++;
         }
     }
 
